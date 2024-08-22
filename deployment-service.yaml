@@ -22,9 +22,9 @@ spec:
 
 ---
 
-apiVersion: v1 # Kubernetes API version
-kind: Service # Kubernetes resource kind we are creating
-metadata: # Metadata of the resource kind we are creating
+apiVersion: v1
+kind: Service
+metadata:
   name: cicd-ssvc
 spec:
   selector:
@@ -32,5 +32,6 @@ spec:
   ports:
     - protocol: "TCP"
       port: 80
-      targetPort: 8080 
-  type: LoadBalancer # type of the service.
+      targetPort: 8080
+      nodePort: 30001  # You can specify a static NodePort if needed
+  type: NodePort
