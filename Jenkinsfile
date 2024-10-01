@@ -1,6 +1,3 @@
-
-Bouba
-Bouba Bhy
 pipeline {
 
     agent any
